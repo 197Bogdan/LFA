@@ -48,7 +48,7 @@ class lambdaNFA:
         self.transition_count += len(transitions)
         self.transitions.extend(transitions)
 
-    def ResetTransitions(self):
+    def resetTransitions(self):
         for node in self.nodes:
             node[1].clear()
         self.transition_count = 0
