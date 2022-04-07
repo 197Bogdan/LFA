@@ -53,7 +53,7 @@ class lambdaNFA:
             node[1].clear()
         self.transition_count = 0
 
-    def print_info(self):
+    def printInfo(self):
         print(f"Nodes[{self.node_count}]: {self.nodes}")
         print(f"Transitions[{self.transition_count}]: {self.transitions}")
         print(f"Entry state: {self.entry_state}")
@@ -109,7 +109,7 @@ def createNFAfromFile(file_in):
 
 m = lambdaNFA(4, [(0, 1, 'a'), (0, 1, 'b')], 0, [0, 3])         # NFA by constructor
 m.addTransitions([(1, 2, 'c'), (2, 3, 'd')])
-m.print_info()
+m.printInfo()
 print()
 print(m.isValidString("acd"))
 print(m.isValidString("ccd"))
@@ -122,7 +122,7 @@ print()
 
 f_in = open("lambdaNFA.txt", 'r')
 n = createNFAfromFile(f_in)             # NFA by file input
-n.print_info()
+n.printInfo()
 print()
 
 nr_cuvinte = int(f_in.readline())
